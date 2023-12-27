@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/andre487/gulp-cleaner-css.git"
+    "url": "git+https://github.com/andre487/gulp-cleaner-css.git"
   },
   "files": [
     "index.js"
@@ -69,7 +69,7 @@
     "audit": "npm audit --omit=dev",
     "deps": "npm install --no-audit && npm run audit",
     "deps:ci": "npm ci --no-audit && npm run audit",
-    "cover": "./node_modules/.bin/nyc npm test",
-    "test": "./node_modules/.bin/mocha ./index.spec.js"
+    "cover": "nyc npm test",
+    "test": "mocha ./index.spec.js"
   }
 }
