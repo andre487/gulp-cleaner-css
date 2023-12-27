@@ -65,7 +65,9 @@
     "vinyl": "^3.0.0"
   },
   "scripts": {
-    "deps": "npm install --no-audit && npm audit --omit=dev",
+    "audit": "npm audit --omit=dev",
+    "deps": "npm install --no-audit && npm run audit",
+    "deps:ci": "npm ci --no-audit && npm run audit",
     "cover": "./node_modules/.bin/nyc npm test",
     "test": "./node_modules/.bin/mocha ./index.spec.js"
   }
