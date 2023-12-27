@@ -16,7 +16,7 @@ module.exports = (options, callback) => {
       return cb(null, file);
     }
     if (file.isStream()) {
-      this.emit('error', new PluginError('gulp-clean-css', 'Streaming not supported!'));
+      this.emit('error', new PluginError('gulp-cleaner-css', 'Streaming not supported!'));
       return cb(null, file);
     }
 
