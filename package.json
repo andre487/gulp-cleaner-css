@@ -4,6 +4,9 @@
   "homepage": "https://github.com/andre487/gulp-cleaner-css#readme",
   "version": "4.2.0",
   "author": "scniro",
+  "contributors": [
+    "andre487"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/andre487/gulp-cleaner-css/issues"
@@ -62,6 +65,7 @@
     "vinyl": "^3.0.0"
   },
   "scripts": {
+    "deps": "npm install --no-audit && npm audit --omit=dev",
     "cover": "./node_modules/.bin/nyc npm test",
     "test": "./node_modules/.bin/mocha ./index.spec.js"
   }
