@@ -20,3 +20,5 @@ jobs:
         run: npm run deps:ci
       - name: Run tests with coverage
         run: npm run cover
+      - name: Send coverage
+        run: cat ./.coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
