@@ -6,6 +6,7 @@
 [![NPM Version](https://img.shields.io/npm/v/gulp-cleaner-css.svg?style=flat-square)](https://www.npmjs.com/package/gulp-cleaner-css)
 
 > [gulp](http://gulpjs.com/) plugin to minify CSS, using [clean-css](https://github.com/jakubpawlowicz/clean-css)
+>
 > This is a fork of [gulp-clean-css](https://github.com/scniro/gulp-clean-css) with updated dependencies.
 
 ## Regarding Issues
