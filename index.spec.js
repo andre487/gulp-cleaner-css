@@ -12,14 +12,14 @@ const expect = chai.expect;
 chai.should();
 chai.use(require('chai-string'));
 
-describe('gulp-clean-css: init', () => {
+describe('gulp-cleaner-css: init', () => {
 
-  it('should return the gulp-clean-css object: required export', () => {
+  it('should return the gulp-cleaner-css object: required export', () => {
     expect(cleanCSS).to.exist;
   });
 });
 
-describe('gulp-clean-css: base functionality', () => {
+describe('gulp-cleaner-css: base functionality', () => {
 
   it('should play nicely with other plugins: gulp-sass: before', done => {
 
@@ -282,7 +282,7 @@ describe('gulp-clean-css: base functionality', () => {
   });
 });
 
-describe('gulp-clean-css: rebase', () => {
+describe('gulp-cleaner-css: rebase', () => {
 
   it('should not rebase files by default - do not resolve relative files', done => {
 

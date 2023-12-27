@@ -27,6 +27,7 @@
     "minify-css",
     "gulp-minify-css",
     "gulp-clean-css",
+    "gulp-cleaner-css",
     "gulpplugin",
     "gulpfriendly"
   ],

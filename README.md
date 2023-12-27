@@ -1,4 +1,6 @@
-# gulp-clean-css
+# gulp-cleaner-css
+
+This is a fork of [gulp-clean-css](https://github.com/scniro/gulp-clean-css) with updated dependencies.
 
 [![Run tests](https://github.com/andre487/gulp-cleaner-css/actions/workflows/run-tests.yml/badge.svg)](https://github.com/andre487/gulp-cleaner-css/actions/workflows/run-tests.yml)
 [![Coverage Status](https://coveralls.io/repos/github/andre487/gulp-cleaner-css/badge.svg)](https://coveralls.io/github/andre487/gulp-cleaner-css)
@@ -6,8 +8,6 @@
 [![NPM Version](https://img.shields.io/npm/v/gulp-cleaner-css.svg?style=flat-square)](https://www.npmjs.com/package/gulp-cleaner-css)
 
 > [gulp](http://gulpjs.com/) plugin to minify CSS, using [clean-css](https://github.com/jakubpawlowicz/clean-css)
->
-> This is a fork of [gulp-clean-css](https://github.com/scniro/gulp-clean-css) with updated dependencies.
 
 ## Regarding Issues
 
@@ -40,7 +40,7 @@ gulp.task('minify-css', () => {
 
 #### callback
 
-Useful for returning details from the underlying [`minify()`](https://github.com/jakubpawlowicz/clean-css#using-api) call. An example use case could include logging `stats` of the minified file. In addition to the default object, `gulp-clean-css` provides the file `name` and `path` for further analysis.
+Useful for returning details from the underlying [`minify()`](https://github.com/jakubpawlowicz/clean-css#using-api) call. An example use case could include logging `stats` of the minified file. In addition to the default object, `gulp-cleaner-css` provides the file `name` and `path` for further analysis.
 
 ```javascript
 const gulp = require('gulp');
