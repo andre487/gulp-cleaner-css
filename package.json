@@ -70,6 +70,7 @@
     "deps": "npm install --no-audit && npm run audit",
     "deps:ci": "npm ci --no-audit && npm run audit",
     "cover": "nyc npm test",
-    "test": "mocha ./index.spec.js"
+    "test": "mocha ./index.spec.js",
+    "release": "npm publish --registry https://registry.npmjs.org"
   }
 }
