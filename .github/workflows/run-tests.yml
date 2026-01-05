@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [18, 20, 22]
         # See supported Node.js release schedule at https://nodejs.org/en/about/previous-releases
     steps:
       - uses: actions/checkout@v4
@@ -22,3 +22,5 @@ jobs:
         run: npm run cover
       - name: Coveralls
         uses: coverallsapp/github-action@v2
+        with:
+          file: .coverage/lcov.info
