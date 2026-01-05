@@ -230,23 +230,46 @@ describe('gulp-cleaner-css: base functionality', () => {
 
   it('should invoke a plugin error: streaming not supported', done => {
 
-    gulp.src('test/fixtures/test.css', {buffer: false})
-      .pipe(cleanCSS()
-        .on('error', err => {
-          expect(err.message).to.equal('Streaming not supported!');
-          done();
-        }));
+    const src = gulp.src('test/fixtures/test.css', { buffer: false });
+    const plugin = cleanCSS();
+    const out = src.pipe(plugin);
+
+    const checkErr = err => {
+      expect(err.message).to.equal('Streaming not supported!');
+    };
+
+    src.once('error', checkErr);
+    plugin.once('error', checkErr);
+
+    out.once('error', (err) => {
+      checkErr(err);
+      src.destroy();
+      plugin.destroy();
+      done();
+    });
+    out.resume();
   });
 
   it('should handle malformed CSS', done => {
-    let i = 0;
 
-    gulp.src('test/fixtures/malformed.css')
-      .pipe(cleanCSS())
-      .on('error', e => {
-        expect(e).to.exist;
-        done();
-      })
+    const src = gulp.src('test/fixtures/malformed.css');
+    const plugin = cleanCSS();
+    const out = src.pipe(plugin);
+
+    const checkErr = err => {
+      expect(err).to.be.equal('Ignoring local @import of "/some/fake/file" as resource is missing.');
+    };
+
+    src.once('error', checkErr);
+    plugin.once('error', checkErr);
+
+    out.once('error', (err) => {
+      checkErr(err);
+      src.destroy();
+      plugin.destroy();
+      done();
+    });
+    out.resume();
   });
 
   it('should not process empty directories or files', done => {
